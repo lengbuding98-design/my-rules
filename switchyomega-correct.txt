@@ -1,0 +1,177 @@
+! SwitchyOmega AutoProxy Rules - 正确版
+! 逻辑：只有明确列出的国内网站直连，其他都走代理
+
+! ========== 必须直连的网站（白名单）==========
+@@||localhost
+@@||127.0.0.1
+@@||::1
+@@||*.local
+@@||*.intranet
+
+! 内网 IP
+@@||10.*
+@@||172.16.*
+@@||172.17.*
+@@||172.18.*
+@@||172.19.*
+@@||172.20.*
+@@||172.21.*
+@@||172.22.*
+@@||172.23.*
+@@||172.24.*
+@@||172.25.*
+@@||172.26.*
+@@||172.27.*
+@@||172.28.*
+@@||172.29.*
+@@||172.30.*
+@@||172.31.*
+@@||192.168.*
+
+! 国内主要网站（按需添加，可以删减）
+@@||baidu.com
+@@||qq.com
+@@||weixin.qq.com
+@@||weibo.com
+@@||taobao.com
+@@||jd.com
+@@||alipay.com
+@@||sina.com.cn
+@@||sohu.com
+@@||163.com
+@@||bilibili.com
+@@||iqiyi.com
+@@||youku.com
+@@||csdn.net
+@@||zhihu.com
+@@||douban.com
+@@||xiaomi.com
+@@||bytedance.com
+@@||ctrip.com
+@@||qcloud.com
+@@||aliyun.com
+@@||tencent.com
+
+! 常用 CDN 和更新服务器（避免走代理影响速度）
+@@||fonts.googleapis.com
+@@||ajax.googleapis.com
+@@||gstatic.com
+@@||googleusercontent.com
+@@||cdn.aliyuncs.com
+@@||cdn.jsdelivr.net
+@@||windowsupdate.com
+@@||update.microsoft.com
+@@||download.windowsupdate.com
+@@||dl.google.com
+@@||redirector.gvt1.com
+
+! GitHub 相关（加速）
+@@||github.com
+@@||github.io
+@@||githubusercontent.com
+@@||raw.githubusercontent.com
+@@||codeload.github.com
+
+! ========================================
+! 需要代理的网站（以下都走代理）
+! ========================================
+
+||lovart.ai
+||api.lovart.ai
+||web-static.lovart.ai
+||*.amazonaws.com
+||*.googletagmanager.com
+
+! Google
+||google.com
+||google.com.hk
+||google.co.jp
+||google.co.uk
+
+! 社交媒体
+||twitter.com
+||x.com
+||facebook.com
+||instagram.com
+||reddit.com
+||tiktok.com
+||tiktokv.com
+||tiktokcdn.com
+||threads.net
+||linkedin.com
+
+! 视频
+||youtube.com
+||youtu.be
+||youtube-nocookie.com
+||twitch.tv
+||netflix.com
+||vimeo.com
+||dailymotion.com
+
+! 通讯
+||telegram.org
+||t.me
+||telegra.ph
+||whatsapp.com
+||signal.org
+||discord.com
+||slack.com
+
+! AI
+||openai.com
+||chat.openai.com
+||api.openai.com
+||claude.ai
+||anthropic.com
+||copilot.microsoft.com
+||perplexity.ai
+||huggingface.co
+
+! 开发
+||gitlab.com
+||bitbucket.org
+||npmjs.com
+||pypi.org
+||crates.io
+
+! 云服务
+||amazon.com
+||aws.amazon.com
+||azure.microsoft.com
+||cloud.google.com
+||cloudflare.com
+||pages.dev
+||workers.dev
+||heroku.com
+||netlify.com
+||vercel.com
+
+! 新闻
+||bbc.com
+||nytimes.com
+||wsj.com
+||bloomberg.com
+||reuters.com
+||theguardian.com
+
+! 学术
+||arxiv.org
+||springer.com
+||elsevier.com
+||ieee.org
+||nature.com
+||sciencedirect.com
+
+! 其他
+||dropbox.com
+||mega.nz
+||spotify.com
+||soundcloud.com
+||imgur.com
+||pinterest.com
+||tumblr.com
+||steamcommunity.com
+
+! ========== 默认规则（未匹配的走直连）==========
+@@||*
